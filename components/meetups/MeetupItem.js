@@ -1,5 +1,5 @@
-import Card from '../ui/Card';
-import classes from './MeetupItem.module.css';
+import Card from "../ui/Card";
+import classes from "./MeetupItem.module.css";
 
 function MeetupItem(props) {
   return (
@@ -13,7 +13,7 @@ function MeetupItem(props) {
           <address>{props.address}</address>
         </div>
         <div className={classes.actions}>
-          <button>Show Details</button>
+          <button>Show Details test</button>
         </div>
       </Card>
     </li>
