@@ -1,4 +1,12 @@
-const NewMeetup = () => {
-  return <div>new meetup</div>;
+import NewMeetupForm from "../../components/meetups/NewMeetupForm";
+
+const NewMeetupPage = () => {
+  function addMeetupHandler(enteredMeetupData) {
+    console.log(enteredMeetupData);
+  }
+
+  return (
+      <NewMeetupForm onAddMeetup={addMeetupHandler} />
+  );
 };
-export default NewMeetup;
+export default NewMeetupPage;
