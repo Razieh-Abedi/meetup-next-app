@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import Head from "next/head";
 import { MongoClient } from "mongodb";
 
 import MeetupList from "../components/meetups/MeetupList";
@@ -22,7 +24,18 @@ const DUMMY_MEETUPS = [
 ];
 
 const HomePage = (props) => {
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Next Meetups</title>
+        <meta
+          name="description"
+          content="Browse a huge list of react and next meetups."
+        />
+      </Head>
+      <MeetupList meetups={props.meetups} />
+    </Fragment>
+  );
 };
 
 // export function getServerSideProps(context) {
